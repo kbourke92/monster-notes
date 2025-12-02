@@ -146,3 +146,22 @@ def delete_all_notes():
         print("All notes and backups deleted successfully.")
     else:
         print("No notes or backups to delete.")
+
+
+# Save Backup
+def save_backup():
+    """Save a timestamped backup without deleting old ones."""
+    if not FILENAME.exists():
+        return
+    try:
+        with FILENAME.open('r', encoding='utf-8') as f:
+            content = f.read().strip()
+        if not content:
+            return
+        timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+        backup_file = BACKUP_DIR / f"notes_{timestamp}.txt"
+        with backup_file.open('w', encoding='utf-8') as bf:
+            bf.write(content)
+        print(f"Backup created: {backup_file.name}")
+    except Exception as e:
+        print(f"Error saving backup: {e}")
