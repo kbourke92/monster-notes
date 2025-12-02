@@ -56,7 +56,7 @@ def get_menu_choice():
     """Get validated menu choice from the user (1-5)."""
     while True:
         choice = input("Enter choice (1-5): ").strip()
-        if choice in {'1','2','3','4','5'}:
+        if choice in {'1', '2', '3', '4', '5'}:
             return choice
         print("Invalid! Enter a number from 1 to 5.")
 
@@ -74,7 +74,7 @@ def get_confirmation(prompt):
     """Prompt user for yes/no confirmation."""
     while True:
         response = input(prompt + " (yes/no): ").strip().lower()
-        if response in {'yes','no'}:
+        if response in {'yes', 'no'}:
             return response
         print("Please type 'yes' or 'no'.")
 
@@ -171,7 +171,7 @@ def save_backup():
 # Menu Display
 def show_menu():
     """Display the ASCII monster and menu."""
-    terminal_width = shutil.get_terminal_size((80,20)).columns
+    terminal_width = shutil.get_terminal_size((80, 20)).columns
 
     # Center the monster
     for line in monster_ascii.splitlines():
@@ -186,6 +186,6 @@ def show_menu():
     print("5. Feeding time is over (Exit) ")
 
 
-    # Run
+# Run
 if __name__ == "__main__":
     main()
