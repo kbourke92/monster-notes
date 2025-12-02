@@ -23,3 +23,28 @@ monster_ascii = r"""
    ~ Nom nom nom ~
      Pages scattered everywhere!
 """
+
+
+# Main
+def main():
+    while True:
+        show_menu()
+        choice = get_menu_choice()
+
+        if choice == '1':
+            note = get_note_input("Feed monster here: ")
+            write_note(note)
+
+        elif choice == '2':
+            note = get_note_input("Change diet here: ")
+            append_note(note)
+
+        elif choice == '3':
+            read_notes()
+
+        elif choice == '4':
+            delete_all_notes()
+
+        elif choice == '5':
+            print("Goodbye!!")
+            break
