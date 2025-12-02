@@ -76,3 +76,15 @@ def get_confirmation(prompt):
         if response in {'yes','no'}:
             return response
         print("Please type 'yes' or 'no'.")
+
+
+def write_note(note):
+    """Overwrite notes and save with timestamp."""
+    timestamp = datetime.now().strftime("[%Y-%m-%d %H:%M]")
+    try:
+        with FILENAME.open('w', encoding='utf-8') as f:
+            f.write(f"{timestamp} {note}\n")
+        save_backup()
+        print("Note written and saved. Mmmm yummy notes!")
+    except Exception as e:
+        print(f"Error writing note: {e}")
