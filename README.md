@@ -12,6 +12,9 @@ Users enter a note which is saved as a text file
 
 Users can also alter or delete notes 
 
+<img width="537" height="325" alt="Menu Screen" src="https://github.com/user-attachments/assets/e0990cad-c46a-4853-94e4-bd769aaad6db" />
+
+
 
 ## Features
 
@@ -19,11 +22,27 @@ Users can also alter or delete notes
 
 - Notes are saved upon entry
   - Notes are saved as a text file with timestamps
+
+<img width="537" height="325" alt="Note Saved" src="https://github.com/user-attachments/assets/15dad170-dfa6-4791-826d-dafb9aa73c9c" />
+
+
 - Ability to alter notes
+
+<img width="537" height="325" alt="Amending Note" src="https://github.com/user-attachments/assets/b9a6955d-5206-415e-8781-b64700af2aa8" />
+
+
 - Option to delete notes
+
+<img width="537" height="325" alt="Deletion Confirmation" src="https://github.com/user-attachments/assets/9b70ee9d-9fbf-4fa1-89df-2d9a8f318a14" />
+
+
 - Input validation
   - When inputting a menu option you must enter numbers
   - Empty notes will not save
+ 
+  <img width="537" height="325" alt="Menu Validation" src="https://github.com/user-attachments/assets/27520de3-e2dd-493e-8310-ef55aa667a2e" />
+  
+
 
 ### Future Features
 
