@@ -88,3 +88,15 @@ def write_note(note):
         print("Note written and saved. Mmmm yummy notes!")
     except Exception as e:
         print(f"Error writing note: {e}")
+
+
+def append_note(note):
+    """Append a new note with timestamp."""
+    timestamp = datetime.now().strftime("[%Y-%m-%d %H:%M]")
+    try:
+        with FILENAME.open('a', encoding='utf-8') as f:
+            f.write(f"{timestamp} {note}\n")
+        save_backup()
+        print("Appended note successfully. Delicious!")
+    except Exception as e:
+        print(f"Error appending note: {e}")
