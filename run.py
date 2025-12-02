@@ -48,3 +48,13 @@ def main():
         elif choice == '5':
             print("Goodbye!!")
             break
+
+
+# Input Validation
+def get_menu_choice():
+    """Get validated menu choice from the user (1-5)."""
+    while True:
+        choice = input("Enter choice (1-5): ").strip()
+        if choice in {'1','2','3','4','5'}:
+            return choice
+        print("Invalid! Enter a number from 1 to 5.")
