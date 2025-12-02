@@ -165,3 +165,21 @@ def save_backup():
         print(f"Backup created: {backup_file.name}")
     except Exception as e:
         print(f"Error saving backup: {e}")
+
+
+# Menu Display
+def show_menu():
+    """Display the ASCII monster and menu."""
+    terminal_width = shutil.get_terminal_size((80,20)).columns
+    
+    # Center the monster
+    for line in monster_ascii.splitlines():
+        print(line.center(terminal_width))
+
+    # Menu below monster
+    print("\n Notes App Menu ")
+    print("1. Feed the monster (Add note)")
+    print("2. Change diet (Append note)")
+    print("3. See diet (Read notes)")
+    print("4. Remove food (Delete notes)")
+    print("5. Feeding time is over (Exit) ")
