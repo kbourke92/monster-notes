@@ -67,3 +67,12 @@ def get_note_input(prompt):
         if note:
             return note
         print("Note cannot be empty!")
+
+
+def get_confirmation(prompt):
+    """Prompt user for yes/no confirmation."""
+    while True:
+        response = input(prompt + " (yes/no): ").strip().lower()
+        if response in {'yes','no'}:
+            return response
+        print("Please type 'yes' or 'no'.")
