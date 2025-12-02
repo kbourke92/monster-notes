@@ -1,6 +1,7 @@
 import os
 from datetime import datetime
 import shutil  # for terminal size
+from pathlib import Path
 
 
 FILENAME = Path("notes.txt")
@@ -171,7 +172,7 @@ def save_backup():
 def show_menu():
     """Display the ASCII monster and menu."""
     terminal_width = shutil.get_terminal_size((80,20)).columns
-    
+
     # Center the monster
     for line in monster_ascii.splitlines():
         print(line.center(terminal_width))
@@ -183,3 +184,8 @@ def show_menu():
     print("3. See diet (Read notes)")
     print("4. Remove food (Delete notes)")
     print("5. Feeding time is over (Exit) ")
+
+
+    # Run
+if __name__ == "__main__":
+    main()
