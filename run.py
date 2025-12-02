@@ -100,3 +100,17 @@ def append_note(note):
         print("Appended note successfully. Delicious!")
     except Exception as e:
         print(f"Error appending note: {e}")
+
+
+def read_notes():
+    """Read notes from file."""
+    if not FILENAME.exists():
+        print("You haven't fed me any notes yet.")
+        return
+    print("\n--- Your Notes ---")
+    try:
+        with FILENAME.open('r', encoding='utf-8') as f:
+            for line in f:
+                print(line.strip())
+    except Exception as e:
+        print(f"Error reading notes: {e}")
