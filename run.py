@@ -114,3 +114,21 @@ def read_notes():
                 print(line.strip())
     except Exception as e:
         print(f"Error reading notes: {e}")
+
+
+def delete_all_notes():
+    """Delete main notes and all backups with confirmation."""
+    confirm = get_confirmation("Are you sure you want to remove all notes?")
+    if confirm != 'yes':
+        print("Deletion cancelled.")
+        return
+
+    deleted_any = False
+    # Delete main notes
+    if FILENAME.exists():
+        try:
+            FILENAME.unlink()
+            deleted_any = True
+            print(f"Deleted: {FILENAME}")
+        except Exception as e:
+            print(f"Could not delete {FILENAME}: {e}")
