@@ -132,3 +132,17 @@ def delete_all_notes():
             print(f"Deleted: {FILENAME}")
         except Exception as e:
             print(f"Could not delete {FILENAME}: {e}")
+
+    # Delete backups
+    for backup in BACKUP_DIR.glob("notes_*.txt"):
+        try:
+            backup.unlink()
+            deleted_any = True
+            print(f"Deleted backup: {backup.name}")
+        except Exception as e:
+            print(f"Could not delete backup {backup.name}: {e}")
+
+    if deleted_any:
+        print("All notes and backups deleted successfully.")
+    else:
+        print("No notes or backups to delete.")
