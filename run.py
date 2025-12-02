@@ -58,3 +58,12 @@ def get_menu_choice():
         if choice in {'1','2','3','4','5'}:
             return choice
         print("Invalid! Enter a number from 1 to 5.")
+
+
+def get_note_input(prompt):
+    """Get validated note input from the user (non-empty)."""
+    while True:
+        note = input(prompt).strip()
+        if note:
+            return note
+        print("Note cannot be empty!")
