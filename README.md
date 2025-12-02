@@ -1,32 +1,70 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Monster Notes
 
-Welcome,
+This is a python based terminal app that runs on the Code Institute mock terminal on Heroku. 
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **May 26, 2025**
+It is a note taking app with a monster theme
 
-## Reminders
+## How to use
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+Monster notes is a function terminal based notes app. 
 
-## Creating the Heroku app
+Users enter a note which is saved as a text file
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+Users can also alter or delete notes 
 
-1. `heroku/python`
-2. `heroku/nodejs`
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+## Features
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+### Existing Features
 
-Connect your GitHub repository and deploy as normal.
+- Notes are saved upon entry
+  - Notes are saved as a text file with timestamps
+- Ability to alter notes
+- Option to delete notes
+- Input validation
+  - When inputting a menu option you must enter numbers
+  - Empty notes will not save
 
-## Constraints
+### Future Features
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+- Export notes as pdf
+- Generate to do list from notes
+- Develop GUI for notes app
 
----
+## Testing
 
-Happy coding!
+I have manually tested this project by doing the following:
+
+- I have passed the code through a PEP8 linter and confirmed there are no problems
+- Given invalid inputs: string where numbers are expected, where text is expected.
+- I have also tested this on my local terminal and the Code Institute terminal on heroku
+
+### Bugs
+
+#### Solved Bugs
+
+- While writing the project I was getting an error that the save option wasnt working. This was due to it not checking there was text present
+- For the ASCII Art and the menu was not displaying below the image. This was due to the menu not being nested under the image.
+
+#### Remaining Bugs
+- No bugs remaining
+
+## Validator Testing
+- PEP8
+  - No errors were returned from [PEP8](https://pep8ci.herokuapp.com/)
+<img width="400" height="300" alt="Screenshot 2025-12-02 144759" src="https://github.com/user-attachments/assets/7a211023-2c90-497e-b925-80023b9c5a90" />
+
+## Deployment
+
+This project was deployed using Code Institute's mock terminal for Heroku.
+- Steps for deployment
+ - Fork or clone this repository
+ - Create a new Heroku app
+ - Set the buildbacks to Python and NodeJS in that order
+ - Link the Heroku app to the repository
+ - Click on Deploy
+
+## Credits
+- Code Institute for the deployment terminal
+- [tomi3-11](https://github.com/tomi3-11) for the initial notes idea
+
